@@ -39,6 +39,10 @@ public class zomgazAI : MonoBehaviour {
 		Hpin = GetComponent<Hp>();
 		nav = GetComponent <NavMeshAgent>();
 		aud = GetComponent<AudioSource> ();
+
+		float speedMultiplier = GameSpeedChanger.monsterSpeedMult;
+		nav.speed = nav.speed * speedMultiplier;
+		nav.acceleration = nav.acceleration * speedMultiplier;
 		//CalculateLevelHpnDamage ();
 	}
 	

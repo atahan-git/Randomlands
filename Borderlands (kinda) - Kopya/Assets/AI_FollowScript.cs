@@ -13,13 +13,20 @@ public class AI_FollowScript : MonoBehaviour {
 	[Range (1f, 20)]
 	public float acceleration = 5;
 
+	//float speedMultiplier = 1f;
+
 	// Use this for initialization
 	void Start () {
 
+
+
 		player = GameObject.FindGameObjectWithTag ("Player");
 		nav = GetComponent<NavMeshAgent> ();
-		nav.speed = maxSpeed;
-		nav.acceleration = acceleration;
+
+		float speedMultiplier = GameSpeedChanger.monsterSpeedMult;
+		nav.speed = maxSpeed * speedMultiplier;
+		nav.acceleration = acceleration * speedMultiplier;
+
 		nav.stoppingDistance = stoppingDistance;
 	
 	}

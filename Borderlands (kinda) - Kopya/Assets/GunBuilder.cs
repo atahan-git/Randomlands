@@ -170,7 +170,9 @@ public class GunBuilder : MonoBehaviour {
 
 
         if (isPlayerGun) {
-            gcont.curAmmo = Mathf.Clamp(gcont.curAmmo, 0, gcont.ammoCapacity);
+            //gcont.curAmmo = Mathf.Clamp(gcont.curAmmo, 0, gcont.ammoCapacity);
+			gcont.ammoCapacity = (int)(gcont.ammoCapacity * gcont.ammoMultiplier);
+			gcont.curAmmo = gcont.ammoCapacity;
         }
 
         //print ("/////////////////////END\\\\\\\\\\\\\\\\\\\\\\");

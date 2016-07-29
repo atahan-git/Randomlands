@@ -26,7 +26,7 @@ public class XpController : MonoBehaviour {
 	public Transform levelUpParent;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 	
 		xp = this;
 	}

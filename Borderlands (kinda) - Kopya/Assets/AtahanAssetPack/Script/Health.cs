@@ -21,9 +21,29 @@ public class Health : MonoBehaviour {
 	public Image lowHpEffect;
 	public float lowHpPercent = 0.2f;
 
+	float healthMultiplier = 1f;
+
 	// Use this for initialization
 	void Start () {
-		health = 100;
+		//health = 100;
+		switch (PlayerPrefs.GetInt ("Diff")) {
+		case 0:
+			healthMultiplier = 2f;
+			break;
+		case 1:
+			healthMultiplier = 2f;
+			break;
+		case 4:
+			healthMultiplier = 0.5f;
+			break;
+		default:
+			healthMultiplier = 1f;
+			break;
+		}
+
+		maxHealth = (int)(maxHealth * healthMultiplier);
+		health = maxHealth;
+		//CalculateLevel();
 	}
 	
 	// Update is called once per frame
@@ -56,7 +76,7 @@ public class Health : MonoBehaviour {
 
 	public void CalculateLevel (){
 		print ("health Calculated");
-		maxHealth = (int)(((float)XpController.xp.level * (float)XpController.xp.level / 2f + 20f) * 5f);
+		maxHealth = (int)(((float)XpController.xp.level * (float)XpController.xp.level / 2f + 20f) * 5f * healthMultiplier);
 
 		if(health > 0)
 			health = maxHealth;

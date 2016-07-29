@@ -44,6 +44,10 @@ public class SawTankAI : MonoBehaviour {
 		nav = GetComponent <NavMeshAgent>();
 		audio = GetComponent<AudioSource> ();
 		anim.speed = animSpeed;
+
+		float speedMultiplier = GameSpeedChanger.monsterSpeedMult;
+		nav.speed = nav.speed * speedMultiplier;
+		nav.acceleration = nav.acceleration * speedMultiplier;
 		//CalculateLevelHpnDamage ();
 	}
 

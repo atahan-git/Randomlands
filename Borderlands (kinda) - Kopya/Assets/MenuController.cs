@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuController : MonoBehaviour {
 
@@ -19,6 +20,10 @@ public class MenuController : MonoBehaviour {
 
     public GameObject menu;
     public GameObject optionsMenu;
+	public GameObject startMenu;
+	public GameObject normalStartMenu;
+	public GameObject quickStart;
+	public Text t_quickStart;
     public GameObject mainScreen;
     public float transitionSpeed = 1;
 
@@ -27,6 +32,32 @@ public class MenuController : MonoBehaviour {
 
         defQualityLevel = QualitySettings.GetQualityLevel();
         QualitySettings.SetQualityLevel(5, true);
+
+		if (PlayerPrefs.GetInt ("Diff", -1) != -1) {
+			quickStart.SetActive (true);
+			switch (PlayerPrefs.GetInt ("Diff", -1)) {
+			case 0:
+				t_quickStart.text = "Easy";
+				break;
+			case 1:
+				t_quickStart.text = "Normal/Kind";
+				break;
+			case 2:
+				t_quickStart.text = "Normal";
+				break;
+			case 3:
+				t_quickStart.text = "Normal/Harsh";
+				break;
+			case 4:
+				t_quickStart.text = "Hardcore";
+				break;
+			default:
+				quickStart.SetActive (false);
+				break;
+			}
+		} else {
+			quickStart.SetActive (false);
+		}
 	}
 	
 	// Update is called once per frame
@@ -39,6 +70,14 @@ public class MenuController : MonoBehaviour {
         CommenceLevelLoad();
         SceneManager.LoadSceneAsync(playLevelId);
     }
+
+	public void PlayDiffChange(int difficulty)
+	{
+		PlayerPrefs.SetInt ("Diff", difficulty);
+
+		CommenceLevelLoad();
+		SceneManager.LoadSceneAsync(playLevelId);
+	}
 
     public void Tutorial()
     {
@@ -73,6 +112,41 @@ public class MenuController : MonoBehaviour {
         to = menu;
         StartCoroutine("Transition");
     }
+
+	//----------------------------------------------------
+
+	public void StartMenu () {
+
+		from = menu;
+		to = startMenu;
+		StartCoroutine("Transition");
+
+	}
+
+	public void NormalStartMenu () {
+
+		from = startMenu;
+		to = normalStartMenu;
+		StartCoroutine("Transition");
+
+	}
+
+
+	public void StartMenuBack () {
+
+		from = startMenu;
+		to = menu;
+		StartCoroutine("Transition");
+	}
+
+	public void NormalStartMenuBack () {
+
+		from = normalStartMenu;
+		to = startMenu;
+		StartCoroutine("Transition");
+	}
+
+	//----------------------------------------------------
 
     public void Exit()
     {

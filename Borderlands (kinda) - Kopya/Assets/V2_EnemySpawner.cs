@@ -48,6 +48,11 @@ public class V2_EnemySpawner : MonoBehaviour {
 	//----------------DEBUG-----------------
 
 	void Start () {
+
+
+		if (PlayerPrefs.GetInt ("Diff", -1) == 4)
+			enemyCount = (int)(enemyCount * 1.5f);
+
 		//spawnPoints = GameObject.FindGameObjectsWithTag ("Respawn");
 		prefabs = STORAGE_Enemies.s;
 

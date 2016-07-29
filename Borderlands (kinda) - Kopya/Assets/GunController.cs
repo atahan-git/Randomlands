@@ -68,10 +68,33 @@ public class GunController : MonoBehaviour {
 	Animator anim;
 	//public bool Inspect = false;
 	// Use this for initialization
+
+	public float damageMultiplier = 1f;
+	public float ammoMultiplier = 1f;
+	public float fireRateMultiplier = 1f;
+
 	void Start () {
 
 		if (val == null)
 			val = GetComponent<GunSharedValues> ();
+
+		switch (PlayerPrefs.GetInt ("Diff")) {
+		case 0:
+			damageMultiplier = 2f;
+			ammoMultiplier = 2f;
+			break;
+		case 3:
+			damageMultiplier = 0.75f;
+			break;
+		case 4:
+			damageMultiplier = 1.5f;
+			ammoMultiplier = 2f;
+			fireRateMultiplier = 1.5f;
+			break;
+		default:
+			damageMultiplier = 1f;
+			break;
+		}
 		
 
 		if (myGunCont != null)
@@ -86,7 +109,7 @@ public class GunController : MonoBehaviour {
 	void Update () {
 		if (dontFire)
 			return;
-
+		
 		val.damage = damage;
 		//val.barrelPoint = barrelPoint;
 
@@ -104,7 +127,7 @@ public class GunController : MonoBehaviour {
 		}
 
 		if (Input.GetMouseButtonDown (0) && !autoFire && !isReloading && canFireAgain && !Input.GetKey(KeyCode.LeftShift)) {
-			InvokeRepeating("ShootRay", 0f, 60f/fireRate);
+			InvokeRepeating("ShootRay", 0f, 60f/(fireRate * fireRateMultiplier));
 			isShooting = true;
 			/*if (ammoType == ammoTypes.heatSink) {
 				CancelInvoke ("AddAmmo");
@@ -205,7 +228,7 @@ public class GunController : MonoBehaviour {
 	void ShootRay() {
 
 		canFireAgain = false;
-		Invoke ("FireAgain", 60f / (float)fireRate);
+		Invoke ("FireAgain", 60f / (float)(fireRate * fireRateMultiplier));
 		//if (myLine == null)
 		//return;
 
@@ -214,7 +237,7 @@ public class GunController : MonoBehaviour {
 
 
 		curAmmo -= 1;
-		BroadcastMessage ("ShootAnim", fireRate);
+		BroadcastMessage ("ShootAnim", (fireRate * fireRateMultiplier));
 		//print ("broadcasted");
 	}
 
