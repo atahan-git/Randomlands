@@ -1,0 +1,185 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &183298
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 454858}
+  - 114: {fileID: 11450790}
+  - 114: {fileID: 11408156}
+  - 114: {fileID: 11499280}
+  m_Layer: 0
+  m_Name: _AllPartsStorageObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &454858
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 183298}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.67039895, y: 2.3267117, z: -0.99048233}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11408156
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 183298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78bed9e0b08e89045a64dccecc36af70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11450790
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 183298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fd8e9f835dca814aa20705cb6d9dc32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  body:
+  - GunParts:
+    - {fileID: 108910, guid: 2cfcf31d9197bad4cbf0f6b4c95de93f, type: 2}
+    - {fileID: 178506, guid: c7815e8ee53882f4b9b47432dc31a33a, type: 2}
+  - GunParts:
+    - {fileID: 108910, guid: e3119e4aacce47d498d1c0b4ec9ed649, type: 2}
+    - {fileID: 178506, guid: fa44ee816bfa4de44a811aaab714b663, type: 2}
+  - GunParts:
+    - {fileID: 108910, guid: f82ec2c749f29e04f80f2be5406e1696, type: 2}
+    - {fileID: 178506, guid: 4ec7cdae978c84c44a7929e40f5b21a6, type: 2}
+  barrel:
+  - GunParts:
+    - {fileID: 132276, guid: 8b26469c0ded7ae45bf642659ea91a10, type: 2}
+    - {fileID: 123946, guid: f5faa427859c1d74f83f1976446fd2de, type: 2}
+  - GunParts:
+    - {fileID: 132276, guid: bcd7badda90b59346a0bd2f99d279f5a, type: 2}
+    - {fileID: 123946, guid: 95790f45cbae95d45ad3bdaa858fa8e3, type: 2}
+    - {fileID: 156132, guid: a0a71377717f8b641beda17dbe5ac6ea, type: 2}
+  - GunParts:
+    - {fileID: 132276, guid: 6df19647c8871044eb3a6a17f9f28bfa, type: 2}
+    - {fileID: 123946, guid: 1093f1b70320b004b801aab0a070d5e1, type: 2}
+    - {fileID: 117366, guid: 10adaccd74033ec49b2a88c252275d80, type: 2}
+  - GunParts:
+    - {fileID: 154594, guid: e4a697b4d17123544b880405beb0aa56, type: 2}
+  magazine:
+  - GunParts:
+    - {fileID: 125738, guid: ff6185f3f93a0c948807ac23be120aee, type: 2}
+    - {fileID: 132074, guid: 73f12943eb37ae441afe64c47dca6294, type: 2}
+    - {fileID: 138974, guid: 4a8cdee046f9d4c4993560f90a7b4b8d, type: 2}
+    - {fileID: 109022, guid: 906dc21305c05db48aac113b85b272f4, type: 2}
+  - GunParts:
+    - {fileID: 183340, guid: 8ea3fe997ce16184c937be2fe08e73a8, type: 2}
+    - {fileID: 167080, guid: 11c41f60f6052974393db64a2747fb45, type: 2}
+    - {fileID: 171862, guid: 09a5257eadef17248a890ba1143a0806, type: 2}
+    - {fileID: 193126, guid: 45e70c5dc5d223446b9abc6c67716d74, type: 2}
+    - {fileID: 101034, guid: 15a94c7c16fd0b8429c9fcbe6dcec3fd, type: 2}
+    - {fileID: 177514, guid: 037ba535b4499824dba5be2b499c7614, type: 2}
+  - GunParts:
+    - {fileID: 116218, guid: 90fa417cc449692499dac72217be5371, type: 2}
+    - {fileID: 116718, guid: 8b1bdc85564e3c64fb4b7e599c3022bd, type: 2}
+    - {fileID: 106768, guid: a265b6d9403e9b749a735bbfabb2afb8, type: 2}
+    - {fileID: 106914, guid: 03b0df4cfd6dbd24d9eef8855bf6df31, type: 2}
+    - {fileID: 164742, guid: 7e18bbcbdd7a9fb448314515ce5e601f, type: 2}
+    - {fileID: 182610, guid: ba804bdb10cf394498a85c45c6cceda6, type: 2}
+    - {fileID: 158822, guid: 870081e4e4a735a428a2a2ac8838e616, type: 2}
+  - GunParts:
+    - {fileID: 198646, guid: ea558cd7c8d351444ba9398e56910b7f, type: 2}
+    - {fileID: 139938, guid: 3eb735702d1ae7a46950ead89449ff61, type: 2}
+    - {fileID: 173752, guid: 4292e7de69e2b8341ab8e6675203e667, type: 2}
+  - GunParts:
+    - {fileID: 122992, guid: f6d249581fb615644a5397b4d37cc847, type: 2}
+  scope:
+  - GunParts:
+    - {fileID: 133924, guid: 0ae2712195b0efe46ab0f509f3b1a0c1, type: 2}
+    - {fileID: 151170, guid: 77cd647392af44242ab19f8833b86855, type: 2}
+  - GunParts:
+    - {fileID: 133924, guid: eab2d4779e2d4204899fe7554af7a036, type: 2}
+    - {fileID: 151170, guid: bac923f71cfbf934db0ee1806baf2ae2, type: 2}
+  - GunParts:
+    - {fileID: 133924, guid: b1c70a6618e04b743991d880af3e6806, type: 2}
+    - {fileID: 151170, guid: e9fbd950fc5332844a909d60c39f17bc, type: 2}
+  stock:
+  - GunParts:
+    - {fileID: 139714, guid: 9a3aa3d11cee8a247a8b883111201b29, type: 2}
+    - {fileID: 171414, guid: b4dd6a1395ae1264ebf8cbd38b038cfb, type: 2}
+  - GunParts:
+    - {fileID: 139714, guid: 3452fcdbd9b56fc448b9a0b05db97dfd, type: 2}
+    - {fileID: 171414, guid: 213203fc9cc890a478d8c230bc128aa2, type: 2}
+  - GunParts:
+    - {fileID: 139714, guid: b9784e58c18fee64f981a4145d1e7d4b, type: 2}
+    - {fileID: 171414, guid: 5fad89736f60daa45b8bfd1485b26b38, type: 2}
+--- !u!114 &11499280
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 183298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 997667551f8c0ea4aa917081be2189c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyLevels:
+  - EnemySizes:
+    - Enemies:
+      - {fileID: 155000, guid: b106b945ade008b448d4812417a16387, type: 2}
+    - Enemies:
+      - {fileID: 160226, guid: 396d388d492ac5b4cbe686ee6209d253, type: 2}
+  - EnemySizes:
+    - Enemies:
+      - {fileID: 141300, guid: de1025992b594d3449d633a6a746fa38, type: 2}
+    - Enemies:
+      - {fileID: 106622, guid: 20c3e5cb768caca4eab67f71baca67b7, type: 2}
+      - {fileID: 102848, guid: 905716339d81590449e186c834caea79, type: 2}
+  - EnemySizes:
+    - Enemies:
+      - {fileID: 160064, guid: 82aedc6ced6e44a408f052e777a2ffad, type: 2}
+    - Enemies:
+      - {fileID: 108516, guid: 2f3a9beb099e8ee46ab95abaa7ce234b, type: 2}
+      - {fileID: 124096, guid: c0138fec3f8a11942bc23a820d58d1b3, type: 2}
+    - Enemies:
+      - {fileID: 175278, guid: 76897c3762607044b9d6e8c2a4c79c22, type: 2}
+    - Enemies:
+      - {fileID: 165140, guid: 3b6ded03fadb80d499b0441f293ed5dc, type: 2}
+  - EnemySizes:
+    - Enemies: []
+    - Enemies:
+      - {fileID: 128760, guid: 94e30617ffedcc84ca3736c3ecc427f8, type: 2}
+    - Enemies:
+      - {fileID: 198148, guid: c07e818713cdab44eb5764ccda7f0c0f, type: 2}
+    - Enemies:
+      - {fileID: 125180, guid: 50f0bad9a46450840a09a3749e54f18a, type: 2}
+  - EnemySizes:
+    - Enemies: []
+    - Enemies: []
+    - Enemies:
+      - {fileID: 123102, guid: d26f887231a38ee47b46fb611b372a5c, type: 2}
+    - Enemies:
+      - {fileID: 181748, guid: 2565c4f016381814b8ff41e5d7e0c046, type: 2}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 183298}
+  m_IsPrefabParent: 1
